@@ -1,12 +1,9 @@
 # Screenshots
 
-Place demo screenshots in this directory. Current files:
+Place demo screenshots in this directory. Required demo screenshots are:
 
-- demo_fixed_loop.png (fixed-loop recommendation)
-- demo_run_overview.png (run output overview)
-
-Optional future additions:
-
-- demo_symbolic_loop.png
-- demo_nested_loop.png
-- demo_call_heavy.png
+- test_fixed.png (working case)
+- test_variable.png (failure case)
+- test_complex.png (call-heavy)
+- test_nested.png (nested loop)
+- test_edge.png (edge case)

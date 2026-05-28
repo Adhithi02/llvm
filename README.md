@@ -141,8 +141,6 @@ Nested loop example (inner loop focus):
 Edge-case loop (stride/pointer behavior):
 ![Edge case loop](docs/screenshots/test_edge.png)
 
-Overview run output (aggregated run log):
-![Run output overview](docs/screenshots/demo_run_overview.png)
 
 ## Testing overview
 
