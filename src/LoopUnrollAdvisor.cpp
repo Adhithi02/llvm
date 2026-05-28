@@ -5,7 +5,7 @@
  * function using ScalarEvolution + LoopInfo and emits an unroll recommendation.
  *
  * Build:  see CMakeLists.txt / Makefile
- * Run:    opt-18 -load-pass-plugin ./LoopUnrollAdvisor.so \
+ * Run:    opt-18 -load-pass-plugin ./build/LoopUnrollAdvisor.so \
  *                -passes="loop-unroll-advisor" -disable-output <ir.ll>
  *
  * Output columns (printed to stderr / stdout):

@@ -1,0 +1,31 @@
+
+╔══ Loop Unroll Advisor — function: matrix_mul ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_nested.c:16                1      ≤ 2147483647    Do not unroll     Trip count is runtime-variable; static unrolling risks code bloat
+║  test_nested.c:17                2      ≤ 2147483647    Do not unroll     Trip count is runtime-variable; static unrolling risks code bloat
+║  test_nested.c:19                3      ≤ 2147483647    Do not unroll     Trip count is runtime-variable; static unrolling risks code bloat
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: unroll_candidate ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_nested.c:27                1      ≤ 2147483647    Do not unroll     Trip count is runtime-variable; static unrolling risks code bloat
+║  test_nested.c:29                2      4                 Full unroll       Tiny static trip count (4); eliminating branch overhead entirely is worthwhile
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: main ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_nested.c:27                1      60                Unroll ×4        Moderate static trip count (60); ×4 factor balances ILP improvement vs. code-size growth
+║  test_nested.c:29                2      4                 Full unroll       Tiny static trip count (4); eliminating branch overhead entirely is worthwhile
+║
+╚===============================================================================
+

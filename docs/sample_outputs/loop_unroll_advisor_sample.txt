@@ -1,0 +1,7 @@
+╔══ Loop Unroll Advisor — function: loop_tiny ══
+║
+║  Location                        Depth  Trip count       Recommendation   Rationale
+║  -------------------------------------------------------------------------------
+║  test_fixed.c:15                  1      4                Full unroll      Tiny static trip count (4); eliminating branch overhead entirely is worthwhile
+║
+╚===============================================================================

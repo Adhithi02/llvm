@@ -13,7 +13,7 @@ CLANG        := clang-$(LLVM_VERSION)
 OPT          := opt-$(LLVM_VERSION)
 
 CXX          := g++
-PLUGIN       := LoopUnrollAdvisor.so
+PLUGIN       := build/LoopUnrollAdvisor.so
 
 CXX_FLAGS    := $(shell $(LLVM_CONFIG) --cxxflags) -fPIC -fno-rtti -shared
 LLVM_INCS    := $(shell $(LLVM_CONFIG) --includedir)
@@ -29,11 +29,16 @@ all: build tests run
 
 build: $(PLUGIN)
 
-$(PLUGIN): LoopUnrollAdvisor.cpp
+$(PLUGIN): src/LoopUnrollAdvisor.cpp
+	@mkdir -p build
 	$(CXX) $(CXX_FLAGS) -I$(LLVM_INCS) -o $@ $<
 	@echo "[ok] Built $(PLUGIN)"
 
 tests/test_fixed.ll: tests/test_fixed.c
+	$(CLANG) $(FIXED_FLAGS) -o $@ $<
+	@echo "[ok] IR: $@"
+
+tests/test_edge.ll: tests/test_edge.c
 	$(CLANG) $(FIXED_FLAGS) -o $@ $<
 	@echo "[ok] IR: $@"
 
@@ -42,7 +47,8 @@ tests/%.ll: tests/%.c
 	@echo "[ok] IR: $@"
 
 TEST_LLS := tests/test_fixed.ll tests/test_variable.ll \
-            tests/test_nested.ll tests/test_complex.ll
+			tests/test_nested.ll tests/test_complex.ll \
+			tests/test_edge.ll
 
 tests: $(TEST_LLS)
 
@@ -65,3 +71,4 @@ verify: build tests
 
 clean:
 	rm -f $(PLUGIN) $(TEST_LLS) tests/test_fixed_ssa.ll
+	@rmdir build 2>/dev/null || true

@@ -1,0 +1,48 @@
+
+╔══ Loop Unroll Advisor — function: loop_tiny ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_fixed.c:18                 1      4                 Full unroll       Tiny static trip count (4); eliminating branch overhead entirely is worthwhile
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: loop_small ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_fixed.c:24                 1      16                Unroll ×4        Moderate static trip count (16); ×4 factor balances ILP improvement vs. code-size growth
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: loop_large ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_fixed.c:30                 1      1000              Do not unroll     Large trip count (1000); branch overhead is negligible; I-cache pressure not worth it
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: loop_boundary ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_fixed.c:36                 1      8                 Full unroll       Tiny static trip count (8); eliminating branch overhead entirely is worthwhile
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: main ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_fixed.c:36                 1      8                 Full unroll       Tiny static trip count (8); eliminating branch overhead entirely is worthwhile
+║  test_fixed.c:30                 1      1000              Do not unroll     Large trip count (1000); branch overhead is negligible; I-cache pressure not worth it
+║  test_fixed.c:24                 1      16                Unroll ×4        Moderate static trip count (16); ×4 factor balances ILP improvement vs. code-size growth
+║  test_fixed.c:18                 1      4                 Full unroll       Tiny static trip count (4); eliminating branch overhead entirely is worthwhile
+║
+╚===============================================================================
+

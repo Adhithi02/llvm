@@ -15,11 +15,14 @@ add_definitions(${LLVM_DEFINITIONS})
 include_directories(${LLVM_INCLUDE_DIRS})
 
 # ── Pass shared library ───────────────────────────────────────────────────────
-add_library(LoopUnrollAdvisor MODULE LoopUnrollAdvisor.cpp)
+add_library(LoopUnrollAdvisor MODULE src/LoopUnrollAdvisor.cpp)
 
 set_target_properties(LoopUnrollAdvisor PROPERTIES
   CXX_STANDARD 17
-  CXX_STANDARD_REQUIRED ON)
+  CXX_STANDARD_REQUIRED ON
+  PREFIX ""
+  OUTPUT_NAME "LoopUnrollAdvisor"
+  LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
 
 # LLVM passes must NOT link against libLLVM — they're loaded into opt at runtime
 target_compile_options(LoopUnrollAdvisor PRIVATE

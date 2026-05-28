@@ -1,0 +1,27 @@
+
+╔══ Loop Unroll Advisor — function: loop_stride_const ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_edge.c:25                  1      4                 Full unroll       Tiny static trip count (4); eliminating branch overhead entirely is worthwhile
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: loop_pointer_chase ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_edge.c:35                  1      unknown           Do not unroll     ScalarEvolution cannot determine trip count; unrolling is speculative
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: loop_call_heavy ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_edge.c:43                  1      8                 Do not unroll     Loop body contains a function call; code-size growth not justified
+║
+╚===============================================================================
+

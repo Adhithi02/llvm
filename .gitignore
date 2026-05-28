@@ -1,0 +1,18 @@
+# Build artifacts
+build/
+*.so
+*.dylib
+*.dll
+
+# Generated LLVM IR
+*.ll
+
+# Outputs and logs
+outputs/*
+!outputs/logs/
+!outputs/logs/.gitkeep
+
+# Editor and tooling
+.vscode/
+.cache/
+.DS_Store

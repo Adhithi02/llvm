@@ -1,0 +1,28 @@
+
+╔══ Loop Unroll Advisor — function: loop_array ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_variable.c:25              1      ≤ 2147483647    Do not unroll     Trip count is runtime-variable; static unrolling risks code bloat
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: loop_ptr ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_variable.c:41              1      unknown           Do not unroll     ScalarEvolution cannot determine trip count; unrolling is speculative
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: main ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_variable.c:41              1      unknown           Do not unroll     ScalarEvolution cannot determine trip count; unrolling is speculative
+║  test_variable.c:25              1      ≤ 2147483647    Do not unroll     Trip count is runtime-variable; static unrolling risks code bloat
+║
+╚===============================================================================
+

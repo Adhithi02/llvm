@@ -1,0 +1,38 @@
+
+╔══ Loop Unroll Advisor — function: loop_with_call ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_complex.c:14               1      ≤ 2147483647    Do not unroll     Loop body contains a function call; code-size growth not justified
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: loop_early_exit ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_complex.c:21               1      unknown           Do not unroll     ScalarEvolution cannot determine trip count; unrolling is speculative
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: small_loop_call ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_complex.c:38               1      4                 Do not unroll     Loop body contains a function call; code-size growth not justified
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: main ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_complex.c:38               1      4                 Do not unroll     Loop body contains a function call; code-size growth not justified
+║  test_complex.c:22               1      3                 Full unroll       Tiny static trip count (3); eliminating branch overhead entirely is worthwhile
+║  test_complex.c:14               1      100               Do not unroll     Loop body contains a function call; code-size growth not justified
+║
+╚===============================================================================
+
