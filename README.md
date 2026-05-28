@@ -124,6 +124,26 @@ To run on specific IR files:
 
 More examples are stored under docs/sample_outputs.
 
+## Screenshots (demo requirement)
+
+Working case (full unroll recommendation, fixed trip count):
+![Working case: fixed trip count](docs/screenshots/test_fixed.png)
+
+Failure case (unknown trip count, no unroll):
+![Failure case: unknown trip count](docs/screenshots/test_variable.png)
+
+Call-heavy loop (no unroll due to call):
+![Call-heavy loop](docs/screenshots/test_complex.png)
+
+Nested loop example (inner loop focus):
+![Nested loop example](docs/screenshots/test_nested.png)
+
+Edge-case loop (stride/pointer behavior):
+![Edge case loop](docs/screenshots/test_edge.png)
+
+Overview run output (aggregated run log):
+![Run output overview](docs/screenshots/demo_run_overview.png)
+
 ## Testing overview
 
 - Scripted IR generation and verification are in scripts/generate_ir.sh and
