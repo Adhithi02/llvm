@@ -1,5 +1,5 @@
-; ModuleID = '/home/adhithi__iyer/loop-advisor/tests/test_fixed.c'
-source_filename = "/home/adhithi__iyer/loop-advisor/tests/test_fixed.c"
+; ModuleID = '/home/akshatha/cdlab/llvm/tests/test_fixed.c'
+source_filename = "/home/akshatha/cdlab/llvm/tests/test_fixed.c"
 target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-i128:128-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-pc-linux-gnu"
 
@@ -169,10 +169,10 @@ attributes #1 = { nocallback nofree nosync nounwind speculatable willreturn memo
 
 !0 = !DIGlobalVariableExpression(var: !1, expr: !DIExpression())
 !1 = distinct !DIGlobalVariable(name: "result", scope: !2, file: !5, line: 14, type: !6, isLocal: false, isDefinition: true)
-!2 = distinct !DICompileUnit(language: DW_LANG_C11, file: !3, producer: "Ubuntu clang version 18.1.3 (1ubuntu1)", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, globals: !4, splitDebugInlining: false, nameTableKind: None)
-!3 = !DIFile(filename: "/home/adhithi__iyer/loop-advisor/tests/test_fixed.c", directory: "/home/adhithi__iyer/loop-advisor", checksumkind: CSK_MD5, checksum: "0678d37e4a66f26c4b3a148c74017c75")
+!2 = distinct !DICompileUnit(language: DW_LANG_C11, file: !3, producer: "Ubuntu clang version 18.1.8 (11~20.04.2)", isOptimized: true, flags: "/usr/lib/llvm-18/bin/clang -O1 -g -S -emit-llvm -fno-vectorize -fno-unroll-loops -o /home/akshatha/cdlab/llvm/tests/test_fixed.ll /home/akshatha/cdlab/llvm/tests/test_fixed.c", runtimeVersion: 0, emissionKind: FullDebug, globals: !4, splitDebugInlining: false, nameTableKind: None)
+!3 = !DIFile(filename: "/home/akshatha/cdlab/llvm/tests/test_fixed.c", directory: "/home/akshatha/cdlab/llvm", checksumkind: CSK_MD5, checksum: "0678d37e4a66f26c4b3a148c74017c75")
 !4 = !{!0}
-!5 = !DIFile(filename: "tests/test_fixed.c", directory: "/home/adhithi__iyer/loop-advisor", checksumkind: CSK_MD5, checksum: "0678d37e4a66f26c4b3a148c74017c75")
+!5 = !DIFile(filename: "tests/test_fixed.c", directory: "/home/akshatha/cdlab/llvm", checksumkind: CSK_MD5, checksum: "0678d37e4a66f26c4b3a148c74017c75")
 !6 = !DICompositeType(tag: DW_TAG_array_type, baseType: !7, size: 32768, elements: !8)
 !7 = !DIBasicType(name: "int", size: 32, encoding: DW_ATE_signed)
 !8 = !{!9}
@@ -184,7 +184,7 @@ attributes #1 = { nocallback nofree nosync nounwind speculatable willreturn memo
 !14 = !{i32 7, !"PIE Level", i32 2}
 !15 = !{i32 7, !"uwtable", i32 2}
 !16 = !{i32 7, !"debug-info-assignment-tracking", i1 true}
-!17 = !{!"Ubuntu clang version 18.1.3 (1ubuntu1)"}
+!17 = !{!"Ubuntu clang version 18.1.8 (11~20.04.2)"}
 !18 = distinct !DISubprogram(name: "loop_tiny", scope: !5, file: !5, line: 16, type: !19, scopeLine: 16, flags: DIFlagPrototyped | DIFlagAllCallsDescribed, spFlags: DISPFlagDefinition | DISPFlagOptimized, unit: !2, retainedNodes: !21)
 !19 = !DISubroutineType(types: !20)
 !20 = !{null}

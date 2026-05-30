@@ -95,6 +95,18 @@ run_and_check "$ROOT_DIR/tests/test_edge.ll" \
   'loop_pointer_chase' 'Do not unroll' 'edge: loop_pointer_chase is not unrolled' \
   'loop_call_heavy' 'Do not unroll' 'edge: loop_call_heavy is not unrolled'
 
+run_and_check "$ROOT_DIR/tests/test_reduction.ll" \
+  'sum_fixed' 'Full unroll' 'reduction: sum_fixed is full unroll' \
+  'dot_product' 'Unroll ×4' 'reduction: dot_product is unroll x4' \
+  'two_induction' 'Unroll ×4' 'reduction: two_induction is unroll x4' \
+  'sum_variable' 'Do not unroll' 'reduction: sum_variable is not unrolled'
+
+run_and_check "$ROOT_DIR/tests/test_conditional.ll" \
+  'loop_call_on_error' 'Do not unroll' 'conditional: loop_call_on_error is not unrolled' \
+  'loop_intrinsic_hint' 'Unroll ×4' 'conditional: loop_intrinsic_hint is unroll x4' \
+  'loop_nested_cond_call' 'Do not unroll' 'conditional: loop_nested_cond_call is not unrolled' \
+  'loop_dispatch_call' 'Do not unroll' 'conditional: loop_dispatch_call is not unrolled'
+
 if (( failures > 0 )); then
   printf "\n[fail] Regression checks failed: %s\n" "$failures"
   exit 1

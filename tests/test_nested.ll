@@ -1,5 +1,5 @@
-; ModuleID = '/home/adhithi__iyer/loop-advisor/tests/test_nested.c'
-source_filename = "/home/adhithi__iyer/loop-advisor/tests/test_nested.c"
+; ModuleID = '/home/akshatha/cdlab/llvm/tests/test_nested.c'
+source_filename = "/home/akshatha/cdlab/llvm/tests/test_nested.c"
 target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-i128:128-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-pc-linux-gnu"
 
@@ -216,10 +216,10 @@ attributes #7 = { nounwind }
 
 !0 = !DIGlobalVariableExpression(var: !1, expr: !DIExpression())
 !1 = distinct !DIGlobalVariable(name: "sink", scope: !2, file: !5, line: 10, type: !6, isLocal: false, isDefinition: true)
-!2 = distinct !DICompileUnit(language: DW_LANG_C11, file: !3, producer: "Ubuntu clang version 18.1.3 (1ubuntu1)", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, globals: !4, splitDebugInlining: false, nameTableKind: None)
-!3 = !DIFile(filename: "/home/adhithi__iyer/loop-advisor/tests/test_nested.c", directory: "/home/adhithi__iyer/loop-advisor", checksumkind: CSK_MD5, checksum: "020c97147aa5e81263fffaae5861753d")
+!2 = distinct !DICompileUnit(language: DW_LANG_C11, file: !3, producer: "Ubuntu clang version 18.1.8 (11~20.04.2)", isOptimized: true, flags: "/usr/lib/llvm-18/bin/clang -O1 -g -S -emit-llvm -o /home/akshatha/cdlab/llvm/tests/test_nested.ll /home/akshatha/cdlab/llvm/tests/test_nested.c", runtimeVersion: 0, emissionKind: FullDebug, globals: !4, splitDebugInlining: false, nameTableKind: None)
+!3 = !DIFile(filename: "/home/akshatha/cdlab/llvm/tests/test_nested.c", directory: "/home/akshatha/cdlab/llvm", checksumkind: CSK_MD5, checksum: "020c97147aa5e81263fffaae5861753d")
 !4 = !{!0}
-!5 = !DIFile(filename: "tests/test_nested.c", directory: "/home/adhithi__iyer/loop-advisor", checksumkind: CSK_MD5, checksum: "020c97147aa5e81263fffaae5861753d")
+!5 = !DIFile(filename: "tests/test_nested.c", directory: "/home/akshatha/cdlab/llvm", checksumkind: CSK_MD5, checksum: "020c97147aa5e81263fffaae5861753d")
 !6 = !DIDerivedType(tag: DW_TAG_volatile_type, baseType: !7)
 !7 = !DIBasicType(name: "int", size: 32, encoding: DW_ATE_signed)
 !8 = !{i32 7, !"Dwarf Version", i32 5}
@@ -229,7 +229,7 @@ attributes #7 = { nounwind }
 !12 = !{i32 7, !"PIE Level", i32 2}
 !13 = !{i32 7, !"uwtable", i32 2}
 !14 = !{i32 7, !"debug-info-assignment-tracking", i1 true}
-!15 = !{!"Ubuntu clang version 18.1.3 (1ubuntu1)"}
+!15 = !{!"Ubuntu clang version 18.1.8 (11~20.04.2)"}
 !16 = distinct !DISubprogram(name: "matrix_mul", scope: !5, file: !5, line: 15, type: !17, scopeLine: 15, flags: DIFlagPrototyped | DIFlagAllCallsDescribed, spFlags: DISPFlagDefinition | DISPFlagOptimized, unit: !2, retainedNodes: !23)
 !17 = !DISubroutineType(types: !18)
 !18 = !{null, !19, !19, !19, !7}

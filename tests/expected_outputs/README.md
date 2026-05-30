@@ -30,3 +30,17 @@ The verification script asserts these categories in a stable way.
 - loop_stride_const: Full unroll
 - loop_pointer_chase: Do not unroll
 - loop_call_heavy: Do not unroll
+
+## test_reduction
+
+- sum_fixed: Full unroll
+- dot_product: Unroll x4
+- two_induction: Unroll x4
+- sum_variable: Do not unroll
+
+## test_conditional
+
+- loop_call_on_error: Do not unroll
+- loop_intrinsic_hint: Unroll x4
+- loop_nested_cond_call: Do not unroll
+- loop_dispatch_call: Do not unroll
