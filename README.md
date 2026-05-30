@@ -74,6 +74,12 @@ For a fuller design view, see docs/architecture.md and DESIGN.md.
         └── ci.yml
 ```
 
+## Installation of LLVM
+
+```bash
+sudo apt install llvm-18 llvm-18-dev llvm-18-tools clang-18
+```
+
 ## Build instructions
 
 ```bash
