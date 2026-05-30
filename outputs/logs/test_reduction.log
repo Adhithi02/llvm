@@ -1,0 +1,36 @@
+
+╔══ Loop Unroll Advisor — function: sum_fixed ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_reduction.c:42             1      8                 Full unroll       Tiny static trip count (8); eliminating branch overhead entirely is worthwhile
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: dot_product ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_reduction.c:50             1      32                Unroll ×4        Moderate static trip count (32); ×4 factor balances ILP improvement vs. code-size growth
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: two_induction ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_reduction.c:61             1      16                Unroll ×4        Moderate static trip count (16); ×4 factor balances ILP improvement vs. code-size growth
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: sum_variable ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_reduction.c:72             1      ≤ 2147483647    Do not unroll     Trip count is runtime-variable; static unrolling risks code bloat
+║
+╚===============================================================================
+

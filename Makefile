@@ -42,13 +42,22 @@ tests/test_edge.ll: tests/test_edge.c
 	$(CLANG) $(FIXED_FLAGS) -o $@ $<
 	@echo "[ok] IR: $@"
 
+tests/test_reduction.ll: tests/test_reduction.c
+	$(CLANG) $(FIXED_FLAGS) -o $@ $<
+	@echo "[ok] IR: $@"
+
+tests/test_conditional.ll: tests/test_conditional.c
+	$(CLANG) $(FIXED_FLAGS) -o $@ $<
+	@echo "[ok] IR: $@"
+
 tests/%.ll: tests/%.c
 	$(CLANG) $(STD_FLAGS) -o $@ $<
 	@echo "[ok] IR: $@"
 
 TEST_LLS := tests/test_fixed.ll tests/test_variable.ll \
-			tests/test_nested.ll tests/test_complex.ll \
-			tests/test_edge.ll
+		tests/test_nested.ll tests/test_complex.ll \
+		tests/test_edge.ll tests/test_reduction.ll \
+		tests/test_conditional.ll
 
 tests: $(TEST_LLS)
 

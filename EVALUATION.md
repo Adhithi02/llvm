@@ -31,6 +31,8 @@ results for the Loop Unroll Advisor.
 - Pointer traversal
 - Call-heavy loops
 - Non-unit strides
+- Reductions
+- Conditional calls
 
 ## Representative test cases
 
@@ -43,6 +45,10 @@ results for the Loop Unroll Advisor.
 | test_complex | loop_with_call | Do not unroll (call) |
 | test_edge | loop_stride_const | Full unroll (TC=4) |
 | test_edge | loop_pointer_chase | Do not unroll (unknown) |
+| test_reduction | sum_fixed | Full unroll (TC=8) |
+| test_reduction | dot_product | Unroll x4 (TC=32) |
+| test_conditional | loop_call_on_error | Do not unroll (call) |
+| test_conditional | loop_intrinsic_hint | Unroll x4 (TC=16) |
 
 ## Validation results
 

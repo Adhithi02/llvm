@@ -25,7 +25,7 @@ for c_file in "$ROOT_DIR"/tests/*.c; do
   base_name="$(basename "$c_file" .c)"
   ll_file="$ROOT_DIR/tests/${base_name}.ll"
   flags="$STD_FLAGS"
-  if [[ "$base_name" == "test_fixed" || "$base_name" == "test_edge" ]]; then
+  if [[ "$base_name" == "test_fixed" || "$base_name" == "test_edge" || "$base_name" == "test_reduction" || "$base_name" == "test_conditional" ]]; then
     flags="$FIXED_FLAGS"
   fi
   "$CLANG_BIN" $flags -o "$ll_file" "$c_file"

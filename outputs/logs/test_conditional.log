@@ -1,0 +1,47 @@
+
+╔══ Loop Unroll Advisor — function: loop_call_on_error ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_conditional.c:45           1      8                 Do not unroll     Loop body contains a function call; code-size growth not justified
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: loop_intrinsic_hint ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_conditional.c:57           1      16                Unroll ×4        Moderate static trip count (16); ×4 factor balances ILP improvement vs. code-size growth
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: loop_nested_cond_call ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_conditional.c:67           1      6                 Do not unroll     Loop body contains a function call; code-size growth not justified
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: loop_dispatch_call ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_conditional.c:79           1      5                 Do not unroll     Loop body contains a function call; code-size growth not justified
+║
+╚===============================================================================
+
+
+╔══ Loop Unroll Advisor — function: main ══
+║
+║  Location                        Depth  Trip count        Recommendation    Rationale
+║  -------------------------------------------------------------------------------------------------------------------
+║  test_conditional.c:79           1      5                 Do not unroll     Loop body contains a function call; code-size growth not justified
+║  test_conditional.c:67           1      6                 Do not unroll     Loop body contains a function call; code-size growth not justified
+║  test_conditional.c:45           1      8                 Do not unroll     Loop body contains a function call; code-size growth not justified
+║
+╚===============================================================================
+

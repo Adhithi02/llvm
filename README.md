@@ -55,6 +55,8 @@ For a fuller design view, see docs/architecture.md and DESIGN.md.
 │   ├── test_nested.c
 │   ├── test_complex.c
 │   ├── test_edge.c
+│   ├── test_reduction.c
+│   ├── test_conditional.c
 │   ├── expected_outputs/
 │   └── verify_output.sh
 ├── scripts/
@@ -146,8 +148,8 @@ Edge-case loop (stride/pointer behavior):
 
 - Scripted IR generation and verification are in scripts/generate_ir.sh and
   tests/verify_output.sh.
-- Tests cover fixed bounds, variable bounds, nested loops, call-heavy loops, and
-  pointer traversal edge cases.
+- Tests cover fixed bounds, variable bounds, nested loops, call-heavy loops,
+  pointer traversal edge cases, reductions, and conditional call handling.
 
 ## Limitations
 

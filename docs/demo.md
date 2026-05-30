@@ -30,3 +30,5 @@ Logs are written to outputs/logs.
 - Demonstrate a symbolic trip count (Do not unroll).
 - Demonstrate nested loop analysis.
 - Demonstrate call-heavy loop blocking.
+- Demonstrate reduction loops with normal unroll advice.
+- Demonstrate conditional calls staying conservative.
